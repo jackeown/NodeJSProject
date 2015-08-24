@@ -1,0 +1,22 @@
+{
+	"servers":[
+				{
+					"name":"NodeJSProject Interface",
+					"type":"http",
+					"port":85,
+					"path":"guiServer/guiServer.js"
+				},
+				{
+					"name":"openSSH",
+					"type":"external",
+					"port":22
+				},
+				{
+					"name":"NodeJSProject Configuration",
+					"type":"net",
+					"port":1337,
+					"path":"configServer/configServer.js",
+					"configServer":true
+				}
+			]
+}

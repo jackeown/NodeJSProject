@@ -1,0 +1,70 @@
+@font-face {
+	font-family:Cantarell;
+	src:url('/assets/fonts/Cantarell-Regular.ttf');
+}
+
+html{
+}
+
+body{
+	margin:0px;
+	font-family:Cantarell;
+	background-color:rgb(220,220,220);
+}
+
+.title{
+	font-size:24pt;
+}
+
+.navigation{
+	position:fixed;
+	margin-left:5em;
+	margin-top:5em;
+	text-align:center;
+	width:23em;
+	padding:0px;
+	background-color:rgb(245,245,245);
+	opacity:0.8;
+}
+.navigation > ul{
+	text-align:left;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+.navigation a {
+	text-decoration:none;
+	color:black;
+}
+
+.navigation > ul > a > li {
+	list-style-type:none;
+	border-top: 1px black solid;
+	margin:0px;
+	padding:1em;
+	text-align:center;
+}
+
+.navigation > ul > a:last-child > li {
+	border-bottom:1px black solid;
+}
+
+.navigation > ul > a > .selected{
+	background-color:rgba(200,200,200,0.5);
+}
+
+.navigation > ul > a.disabled > li {
+	text-decoration:line-through;
+	box-shadow:inset 0px 0px 10px ;
+	background-color:rgba(200,200,200,0.3);
+	cursor:default;
+}
+
+.header{
+
+}
+
+
+.footer {
+	
+}

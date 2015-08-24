@@ -1,0 +1,22 @@
+<%
+	var programName = 'NodeJSProject Applications';
+	var stylesPath = "/assets/css/";
+	var stylesheets = ["styles.css","mobile.css","desktop.css"];
+	var loggedIn = true;
+	if(!loggedIn)
+	{
+%>
+<%- helpers.getFileContents("/index.html") %>
+<%
+	}
+	else{
+%>
+<!DOCTYPE html>
+<html>
+	<%- helpers.getHeader(programName,stylesPath,stylesheets) %>
+	<body>
+		<%- helpers.getNavigation(programName,"apps") %>	
+	</body>
+</html>
+
+<% } %>

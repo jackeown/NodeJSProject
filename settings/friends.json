@@ -1,0 +1,25 @@
+{
+	"friends":[
+				{
+					"name":"James McKeown",
+					"id":"C1F8C4EE-0FE6-11E5-ACCA-228240254040",
+					"ip":"8.8.8.8",
+					"guiPort":"80",
+					"configPort":"1337"
+				},
+				{
+					"name":"Michael McKeown",
+					"id":"E0E982EE-0FE6-11E5-8C9D-228240254040",
+					"ip":"8.8.4.4",
+					"guiPort":"80",
+					"configPort":"1337"
+				},
+				{
+					"name":"Matt Damon",
+					"id":"E8701E38-0FE6-11E5-8662-228240254040",
+					"ip":"68.235.106.2",
+					"guiPort":"80",
+					"configPort":"1337"
+				}
+			]
+}

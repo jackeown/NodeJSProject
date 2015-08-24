@@ -1,0 +1,18 @@
+=================================================
+=========== File Structure Planning =============
+=================================================
+
+	---------------------
+	--- Hierarchy -------
+	---------------------
+		
+		+ NodeJSProject
+			- client.js							(Main entry point for the application)
+			- install.sh						(install file.  When run it installs and sets up the initial configuration for the NodeJSProject)
+			- README.md							(Readme file to explain what the software is, its use cases, and how it works)
+			+ docs
+				-
+			+ servers
+				-
+			+ settings
+				-

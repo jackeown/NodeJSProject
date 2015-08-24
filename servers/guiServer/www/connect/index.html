@@ -1,0 +1,49 @@
+<%
+	var programName = 'NodeJSProject Connections';
+	var stylesPath = "/assets/css/";
+	var stylesheets = ["styles.css","mobile.css","desktop.css"];
+	var loggedIn = true;
+	if(!loggedIn)
+	{
+%>
+<%- helpers.getFileContents("/index.html") %>
+<%
+	}
+	else{
+%>
+
+<html>
+	<%- helpers.getHeader(programName,stylesPath,stylesheets) %>
+	<body>
+		<div class="container" id="friendsGraph" style="position:absolute;width:100%;height:100%;padding:0px;margin:0px;top:0px:left:0px;">
+		</div>
+		<script src="../assets/clientJS/graph.js"></script>
+		<script src="../GraphVisualization/sigma.min.js"></script>
+		<script src="../GraphVisualization/plugins/sigma.parsers.json.min.js"></script>
+		<script src="../GraphVisualization/plugins/sigma.plugins.dragNodes.min.js"></script>
+		<script>
+			
+			var s = new sigma({
+			  renderers: [
+			    {
+			      container: document.getElementById('friendsGraph'),
+			      type: 'canvas' // sigma.renderers.canvas works as well
+			    }
+			  ]
+			});
+			s.settings('maxNodeSize',30);
+			s.settings('defaultNodeColor','rgb(100,100,100)');
+			s.settings('defaultEdgeColor','black');
+			s.settings('defaultLabelSize',24);
+			
+			var friends = getFriends();
+			graphFriends(friends,s);
+			sigma.plugins.dragNodes(s, s.renderers[0]);
+			s.refresh(); //update friendsGraph div
+			
+		</script>
+		<%- helpers.getNavigation(programName,"connect") %>	
+	</body>
+</html>
+
+<% } %>

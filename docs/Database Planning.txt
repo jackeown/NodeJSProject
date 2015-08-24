@@ -1,0 +1,17 @@
+=================================================
+============== Database Planning ================
+=================================================
+
+	---------------------
+	--- Tables ----------
+	---------------------
+		
+		+ Users
+			- id				(integer)		
+			- firstName			(varchar)
+			- lastName			(varchar)
+			- email				(varchar)
+			- loggedIn			(boolean)
+			- sessionKey		(varchar)		(random string used for session encryption.)
+			
+		+ 
