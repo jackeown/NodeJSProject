@@ -1,4 +1,5 @@
 "P2P Internet Client Version 1.0"
+=================================
 
 TO INSTALL THE CLIENT ON YOUR OWN COMPUTER, FOLLOW
 THESE SIMPLE STEPS:
