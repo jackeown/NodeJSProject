@@ -1,8 +1,14 @@
-exports.mainConfig = JSON.parse(require('fs').readFileSync('/home/user/Desktop/Computer Science/NodeJSProject/settings/configuration.json',"utf8"));
-exports.guiServerConfig = JSON.parse(require('fs').readFileSync('/home/user/Desktop/Computer Science/NodeJSProject/servers/guiServer/www/assets/serverJS/configuration.json',"utf8"));
-
+exports.path = require("path");
 exports.fs = require('fs');
 exports.ejs = require('ejs');
+
+var mainConfigPath = exports.path.join(exports.path.dirname(require.main.filename),"settings","configuration.json");
+var mainConfigFile = exports.fs.readFileSync(mainConfigPath,"utf8");
+exports.mainConfig = JSON.parse(mainConfigFile);
+
+var guiConfigPath = exports.path.join(__dirname,"configuration.json");
+var guiConfigFile = exports.fs.readFileSync(guiConfigPath,"utf8");
+exports.guiServerConfig = JSON.parse(guiConfigFile);
 
 exports.getHeader = function(title,stylesPath,stylesheets)
 {

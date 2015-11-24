@@ -22,13 +22,17 @@
 
 exports.onRequest = function(req,res)
 {
-	var helpers = require("./www/assets/serverJS/helpers.js");
+	var path = require("path");
+	var helpers = require(path.join(__dirname,"www","assets","serverJS","helpers.js"));
 	var ejs = require('ejs');
 	var url = require("url").parse(req.url, true);
 	var path = url.pathname;
 	
 	var extension = helpers.getExtension(helpers.linkTo(path));
 	var contentType = helpers.getContentTypeFromExtension(extension);
+	//~ console.log("TESTING1: "+__dirname);
+	//~ console.log("TESTING2: "+require.main.filename);
+	
 	if (contentType != null)
 	{
 		try
